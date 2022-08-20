@@ -1,0 +1,272 @@
+body
+{
+    scroll-behavior: smooth;
+}
+
+/* *************************************************************** ACHIEVEMENTS ************************************************************************************************************************************************************************ ********************************************************   */
+
+    section.about-achievement
+        {
+            margin-top: 3rem;
+        }
+
+    section.about-achievement .achievements-container
+        {
+            display: grid;
+            grid-template-columns: 40%  60%;
+            gap: 2rem;
+        }
+
+    section.about-achievement .achievements-container .right-achievement > p
+        {
+            margin: 1.6rem 0 2.4rem;
+        }
+
+    section.about-achievement .achievements-container .left-achievement img
+        {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+    section.about-achievement .achievements-container .right-achievement .achievement-cards
+        {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+    /************** ACHIEVEMENT-CARD **************/
+
+        section.about-achievement .achievements-container .right-achievement .achievement-cards .achievement-card
+            {
+                background: var(--color-bg2);
+                padding: 1.5rem;
+                border-radius: 1.4rem;
+                text-align: center;
+                color: var(--color-bg);
+                transition: var(--transition);
+            }
+
+        section.about-achievement .achievements-container .right-achievement .achievement-cards .achievement-card:hover
+
+            {
+                background: transparent;
+                border: solid 2px var(--color-bg2);
+                color: var(--color-white);
+            }
+
+        .achievement-card h3
+            {
+                font-size: 1.7rem;
+                font-weight: 500;
+            }
+
+        .achievement-card p
+            {
+
+                font-size: 0.8rem;
+                margin-top: 0.5rem;
+            }
+
+    /* ******************************************** */
+
+    /************** ACHIEVEMENT CONS **************/
+    
+        .achievement-icon
+            {
+            background-color: var( --color-danger);
+            color: var(--color-white);
+            font-size: 1.4rem;
+            padding:  0.4rem 0.9rem; 
+            display: inline-block;
+            margin-bottom: 1.7rem;
+            border-radius: 1.2rem;
+            }
+
+        .achievement-card:nth-child(2) .achievement-icon
+            {
+                background: var(--color-warning);
+            }
+
+        .achievement-card:nth-child(3) .achievement-icon
+            {
+                background: var(--color-sucess);
+            }
+
+    /* *************************************** */
+
+/* ************************************************************************************************************************************************************************************************************************************************************************************** ********************************************************  */
+
+/* *************************************************************** TEAMS ************************************************************************************************************************************************************************ ********************************************************   */
+
+    section.team
+        {
+            background-color: var(--color-bg1);
+        
+        }
+
+    section.team .team-container
+        {
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+    
+    /************** TEAM-MEMBER **************/
+        section.team .team-container .team-member
+            {
+                background: var(--color-bg2);
+                border-radius: 2rem;
+                color: var(--color-bg1);
+                padding-top: 3rem;
+                border: 0.1rem solid var(--color-white);
+                transition: var(--transition);
+                position: relative;
+                overflow: hidden;
+            }
+
+        section.team .team-container .team-member:hover
+            {
+                background: transparent;
+                border : 0.1rem solid var(--color-bg2);
+                color: var(--color-white);
+            }
+
+    /* *************************************** */
+
+    /************** TEAM-MEMBER-IMAGE **************/
+
+        .team-member-image
+            {
+                filter: saturate(0);
+                width: 8rem;
+                height: 8rem;
+                border-radius: 50%;
+                overflow: hidden;
+                
+                margin: 0 auto 1rem;
+                border: 0.3rem solid var(--color-bg1);
+                transition: var(--transition);
+            }
+
+        section.team .team-container .team-member:hover .team-member-image
+            {
+                filter: saturate(1);
+            }
+
+    /* *************************************** */
+
+    /************** TEAM-MEMBER-INFO **************/
+
+        section.team .team-container .team-member .team-member-info
+            {
+                margin-top: 1.6rem;
+            }
+
+        section.team .team-container .team-member .team-member-info p
+            {
+                margin-top: 0.8rem;
+            }
+
+    /* *************************************** */
+
+    /************** SOCIAL MEDIA **************/
+        .team-member-social-medias
+            {
+            position: absolute; 
+            top: 7%;
+            right:-100%;
+
+            display: flex;
+            flex-direction: column;
+            background: var(--color-primary);
+            border-radius: 1rem 0 0 1rem;
+            box-shadow: -0.1rem 0 0.7rem var(--color-bg2);
+            transition: var(--transition);
+            }
+
+        section.team .team-container .team-member:hover .team-member-social-medias 
+            {
+                right: 0;
+            }
+   
+
+        .team-member-social-medias a
+            {
+                padding: 1rem;
+            }
+
+        .team-member-social-medias i
+            {
+                color: var(--color-bg); 
+            }
+    /* *************************************** */
+
+    .footer
+        {
+            border-top: solid 1px var(--color-white);
+        }
+
+/* ************************************************************************************************************************************************************************************************************************************************************************************** ********************************************************  */
+
+/* *************************************************************** MEDIA QUERIES ************************************************************************************************************************************************************************ ********************************************************   */
+    /* ***************** FOR TABLET ********************** */
+        @media screen and (max-width:1024px) 
+            {
+                section.about-achievement
+                    {
+                        
+                        
+                    }
+                
+                section.about-achievement .achievements-container
+                    {
+                        
+                        grid-template-columns: 1fr;
+                        gap: 1rem;
+                    }
+
+                .left-achievement
+                    {
+                        width: 70%;
+                        margin: 0 auto;
+                    
+                    }
+            }
+
+    /* ************************************************** */
+
+    /* ***************** FOR PHONE ********************** */
+
+        @media screen and (max-width:600px) 
+            {
+                section.about-achievement .achievements-container .right-achievement .achievement-cards
+                    {
+                        grid-template-columns: 1fr 1fr;
+                        gap: 0.6rem;
+                    }
+                
+                section.team .team-container
+                    {
+                        grid-template-columns: 1fr 1fr;
+                        gap: 0.7rem;
+                    }
+
+                .team-member-image
+                    {
+                        width: 5rem;
+                        height: 5rem;
+                    }
+
+                section.team .team-container .team-member
+                    {
+                        padding:0 ;
+                        padding-top: 1rem;
+                    }
+            }
+
+    /* ************************************************** */
+
+/* ************************************************************************************************************************************************************************************************************************************************************************************** ********************************************************  */
